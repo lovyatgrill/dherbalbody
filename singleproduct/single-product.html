@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../components/nav-component.js"></script>
+    <script src="..//components/footer-component.js"></script>
+    <title>Single Product</title>
+    <link rel="stylesheet" href="product-styles.css">
+</head>
+
+<body>
+    <nav-header></nav-header>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <div class="container">
+                <nav class="breadcrumb-nav">
+                    <a href="#">Home</a>
+                    <span>/</span>
+                    <a href="#" id="product-category"></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-section">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image" />
+                    </div>
+                    <div class="image-thumbnails">
+                        <div class="thumbnail-grid" id="thumbnail-grid">
+                            <!-- Single thumbnail that will be updated with the main image -->
+                            <div class="thumbnail active">
+                                <img class="thumbnail-img" src="" alt="Product Thumbnail" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-details">
+                    <div class="product-header">
+                        <span class="product-category" id="product-category-tag"></span>
+                        <h1 class="product-title" id="product-title"></h1>
+                        <div class="product-rating">
+                            <div class="stars" id="product-stars"></div>
+                            <span class="rating-text"></span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price" id="product-price"></span>
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="quantity-section">
+                            <label for="quantity">Quantity</label>
+                            <div class="quantity-controls">
+                                <button type="button" class="quantity-btn minus">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="size-section">
+                            <label>Size</label>
+                            <div class="size-options" id="size-options">
+                                <button class="size-option active" data-size="50ml"></button>
+                                <button class="size-option" data-size="100ml"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" id="add-to-cart">Add to Cart</button>
+                        <button class="wishlist-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8l-5-5z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="9,9 9,15 15,15" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Free shipping over $75</span>
+                        </div>
+                        <div class="shipping-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Ships in 1-2 business days</span>
+                        </div>
+                    </div>
+
+                    <div class="payment-options">
+                        <p>Pay with</p>
+                        <div class="payment-icons">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%23003087'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='12' font-weight='bold'%3EPayPal%3C/text%3E%3C/svg%3E" alt="PayPal">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%231A73E8'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='10'%3EGoogle Pay%3C/text%3E%3C/svg%3E" alt="Google Pay">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%23000'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='10'%3EApple Pay%3C/text%3E%3C/svg%3E" alt="Apple Pay">
+                        </div>
+                        <p class="payment-note">or 4 interest-free payments of $15.00 with Klarna or Afterpay</p>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>Key Features</h3>
+                        <ul id="product-features-list">
+                            <!-- Features will be populated dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Description Section -->
+    <section class="product-description">
+        <div class="container">
+            <div class="description-tabs">
+                <button class="tab-btn active" data-tab="description">Product Description</button>
+                <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+                <button class="tab-btn" data-tab="reviews" id="reviews-tab-btn"></button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-panel active" id="description">
+                    <div class="description-content" id="product-description-content">
+                        <!-- Description content will be populated dynamically -->
+                    </div>
+                </div>
+                <div class="tab-panel" id="ingredients">
+                    <div class="ingredients-content" id="product-ingredients-content">
+                        <!-- Ingredients content will be populated dynamically -->
+                    </div>
+                </div>
+                <div class="tab-panel" id="reviews">
+                    <div class="reviews-content" id="product-reviews-content">
+                        <!-- Reviews content will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="before-after-section">
+        <div class="before-after-bg"></div>
+        <div class="container">
+            <h2>Before & After Treatment</h2>
+            <div class="before-after-content">
+                <div class="before-after-image">
+                    <div class="before-image">
+                        <img src="../cdn/shop/products/before-treatment.jpg" alt="Before Treatment">
+                        <span class="label">Before</span>
+                    </div>
+                    <div class="after-image">
+                        <img src="../cdn/shop/products/after-treatment.jpg" alt="After Treatment">
+                        <span class="label">After</span>
+                    </div>
+                    <div class="play-button">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.9)"/>
+                            <polygon points="25,20 25,40 40,30" fill="#333"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <h2>Customer Reviews</h2>
+                <div class="review-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Customer satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">90%</span>
+                        <span class="stat-label">Repurchase rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Would recommend to others</span>
+                    </div>
+                </div>
+            </div>
+            <div class="review-cards" id="review-cards">
+                <!-- Review cards will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Newsletter Section -->
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CUSTOMER</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>INFORMATION</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DHERBALBODY. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%23003087'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='8'%3EVisa%3C/text%3E%3C/svg%3E" alt="Visa">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%23EB001B'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='8'%3EMasterCard%3C/text%3E%3C/svg%3E" alt="MasterCard">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='24' fill='%23006FCF'%3E%3Ctext x='2' y='16' font-family='Arial' font-size='8'%3EAmex%3C/text%3E%3C/svg%3E" alt="American Express">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="product-script.js"></script>
+    <script type="module">
+      import '../js/data.js';
+      import './product-script.js';
+      // product-script.js will handle dynamic rendering
+    </script>
+</body>
+</html>
+

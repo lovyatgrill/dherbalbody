@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.paypal.com/sdk/js?client-id=Afg5tTa0HnNYsFkR7hlrsnaI-YtT7-3BgLFMGdzbckbDxmNOEENZyQBgWVM2PJ8vGb4Xgr4FRHbquHEb&currency=USD"></script>
+    <script src="/components/nav-component.js"></script>
+    <script src="/components/footer-component.js"></script>
+    <script type="module" src="script.js"></script>
+    <title>Dherbalbody - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav-header></nav-header>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Dherbalbody</h1>
+            <div class="cart-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M17 13H7" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column - Form -->
+            <div class="form-section">
+                <!-- Contact Section -->
+                <section class="contact-section">
+                    <h2>Contact</h2>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email or mobile phone number" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Email me with news and offers</label>
+                    </div>
+                </section>
+
+                <!-- Delivery Section -->
+                <section class="delivery-section">
+                    <h2>Delivery</h2>
+                    
+                    <!-- Delivery Options -->
+                    <div class="delivery-options">
+                        <div class="delivery-option selected">
+                            <input type="radio" id="ship" name="delivery" value="ship" checked>
+                            <label for="ship">
+                                <span class="option-text">Ship</span>
+                                <svg class="delivery-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16 3H5C3.9 3 3 3.9 3 5V15C3 16.1 3.9 17 5 17H16C17.1 17 18 16.1 18 15V5C18 3.9 17.1 3 16 3Z" stroke="#FF6B35" stroke-width="2"/>
+                                    <path d="M18 8L22 12L18 16" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                        </div>
+                        
+                        <div class="delivery-option">
+                            <input type="radio" id="pickup" name="delivery" value="pickup">
+                            <label for="pickup">
+                                <span class="option-text">Pickup in store</span>
+                                <svg class="delivery-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 9L12 2L21 9V20C21 20.5 20.5 21 20 21H4C3.5 21 3 20.5 3 20V9Z" stroke="#666" stroke-width="2"/>
+                                    <path d="M9 22V12H15V22" stroke="#666" stroke-width="2"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Address Form -->
+                    <div class="address-form">
+                        <div class="input-group">
+                            <select id="country" required>
+                                <option value="">Country/Region</option>
+                                <option value="vietnam" selected>Nigeria</option>
+                                <option value="usa">United States</option>
+                                <option value="uk">United Kingdom</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-row">
+                            <div class="input-group half">
+                                <input type="text" id="firstName" placeholder="First name (optional)">
+                            </div>
+                            <div class="input-group half">
+                                <input type="text" id="lastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="text" id="address" placeholder="Address" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                        </div>
+                        
+                        <div class="input-row">
+                            <div class="input-group half">
+                                <input type="text" id="city" placeholder="City" required>
+                            </div>
+                            <div class="input-group half">
+                                <input type="text" id="postalCode" placeholder="Postal code (optional)">
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="saveInfo">
+                            <label for="saveInfo">Save this information for next time</label>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="shipping-method">
+                        <h3>Shipping method</h3>
+                        <p class="shipping-note">Enter your shipping address to view available shipping methods.</p>
+                    </div>
+                </section>
+
+                <!-- Payment Section -->
+                <section class="payment-section">
+                    <h2>Payment</h2>
+                    <div class="payment-options">
+                        <div id="paypal-button-container"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                
+                <!-- Dynamic Cart Items -->
+                <div id="cart-items">
+                    <!-- Cart items will be inserted here -->
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="summary-subtotal"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="summary-shipping"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span class="summary-discount"></span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="summary-total"></span>
+                    </div>
+                </div>
+
+                <!-- Mock PayPal Button -->
+                <div class="mock-paypal-button" style="display:none;">
+                    <button id="checkout-button" class="paypal-button">
+                        Pay with PayPal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer-component></footer-component>
+</body>
+</html>
+

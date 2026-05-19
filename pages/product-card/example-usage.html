@@ -1,0 +1,21 @@
+<div>
+    <div class="product-grid" id="productGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 20px;"></div>
+
+    <script type="module">
+        import { productsData } from '../../js/data.js';
+
+        function renderProducts() {
+            const productGrid = document.getElementById('productGrid');
+            const products = Object.values(productsData).slice(0, 6); // Get first 6 products
+
+            products.forEach(product => {
+                const productCard = document.createElement('product-card');
+                productCard.setAttribute('product-data', JSON.stringify(product));
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        // Render products when the page loads
+        document.addEventListener('DOMContentLoaded', renderProducts);
+    </script>
+</div>

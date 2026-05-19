@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Collections - Dherbalbody</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../components/nav-component.js" type="module"></script>
+    <script src="../components/footer-component.js" type="module"></script>
+    <script src="../pages/product-card/product-card-component.js" type="module"></script>
+    <script src="collection.js" type="module"></script>
+</head>
+<body>
+    
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-slider">
+            <div class="announcement-item active">
+                <span>Clearance Sale Event: Up to 50% Off Select Items!</span>
+            </div>
+            <div class="announcement-item">
+                <span>Best special offers every week 40% Off! Free delivery time</span>
+            </div>
+            <div class="announcement-item">
+                <span>Free Shipping on Orders over $140</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+   <nav-header></nav-header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <img src="https://fabish-theme.myshopify.com/cdn/shop/files/Fabish_Loader-output_534f0495-8160-4416-87a0-e39414a547d0.png?v=1711344866&width=1920" alt="Face Cream Background" class="hero-bg-image">
+            <div class="hero-shape"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="/">HOME</a>
+                    <span class="separator">|</span>
+                    <a href="/collections">ALL COLLECTIONS</a>
+                </div>
+                <h1 class="hero-title">ALL PRODUCTS</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Filter Controls -->
+    <div class="mobile-filter-controls">
+        <button class="mobile-filter-button" id="showFilters">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Filter & Sort
+        </button>
+        <div class="active-filters">
+            <!-- Active filters will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Mobile Filter Panel -->
+    <div class="mobile-filter-panel" id="mobileFilterPanel">
+        <div class="mobile-filter-header">
+            <h3>Filters</h3>
+            <button class="mobile-filter-close" id="closeFilters">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-filter-content">
+            <!-- Simplified filter options will be rendered here -->
+        </div>
+        
+        <button class="mobile-filter-apply" id="applyFilters">
+            Apply Filters
+        </button>
+    </div>
+
+    <!-- Collection Section -->
+    <section class="collection-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <p class="section-subtitle">TOP CATEGORIES</p>
+                <h2 class="section-title">Best Skin Care Products</h2>
+            </div>
+
+            <div class="collection-main-content">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Filter Header -->
+                    <div class="filter-header">
+                        <h3 class="filter-title">Filter:</h3>
+                    </div>
+
+                    <!-- Availability Filter -->
+                    <div class="sidebar-filter-group">
+                        <h3 class="sidebar-filter-title">Availability</h3>
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="in-stock">
+                            <span class="checkmark"></span>
+                            <span class="option-text">In stock</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="out-of-stock">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Out of stock</span>
+                        </label>
+                    </div>
+
+                    <!-- Skin Type Filter -->
+                    <div class="sidebar-filter-group">
+                        <h3 class="sidebar-filter-title">Skin Type</h3>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skin-type" value="dark">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Dark</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skin-type" value="fair">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Fair</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skin-type" value="light">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Light</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skin-type" value="medium">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Medium</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="skin-type" value="sensitive">
+                            <span class="checkmark"></span>
+                            <span class="option-text">Sensitive</span>
+                        </label>
+                    </div>
+
+                    <!-- Unit Count Filter -->
+                    <div class="sidebar-filter-group">
+                        <h3 class="sidebar-filter-title">Unit Count</h3>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="10ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">10ml millilitre</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="15ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">15ml millilitre</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="20ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">20ml millilitre</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="30ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">30ml millilitre</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="40ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">40ml millilitre</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="unit-count" value="60ml">
+                            <span class="checkmark"></span>
+                            <span class="option-text">60ml millilitre</span>
+                        </label>
+                    </div>
+
+                    <!-- Best Seller Section -->
+                    <div class="sidebar-product-section">
+                        <h3 class="sidebar-filter-title">Best Seller</h3>
+                        <div class="sidebar-product-card" id="best-seller-product">
+                            <!-- Best seller product will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- New Arrivals Section -->
+                    <div class="sidebar-product-section">
+                        <h3 class="sidebar-filter-title">New Arrivals</h3>
+                        <div class="sidebar-product-list" id="new-arrivals-products">
+                            <!-- New arrivals products will be loaded here -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Filter and Sort Bar -->
+                    <div class="filter-sort-bar">
+                        <div class="results-sort-section">
+                            <div class="results-info">
+                                <span>Showing 1-8 of 8 Results</span>
+                            </div>
+                            
+                            <div class="view-options">
+                                <button class="view-btn" data-view="grid-1">
+                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                        <rect x="1" y="1" width="6" height="6" stroke="currentColor" fill="none"/>
+                                        <rect x="9" y="1" width="6" height="6" stroke="currentColor" fill="none"/>
+                                        <rect x="1" y="9" width="6" height="6" stroke="currentColor" fill="none"/>
+                                        <rect x="9" y="9" width="6" height="6" stroke="currentColor" fill="none"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" data-view="grid-2">
+                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                        <rect x="1" y="1" width="4" height="4" stroke="currentColor" fill="none"/>
+                                        <rect x="6" y="1" width="4" height="4" stroke="currentColor" fill="none"/>
+                                        <rect x="11" y="1" width="4" height="4" stroke="currentColor" fill="none"/>
+                                        <rect x="1" y="6" width="4" height="4" stroke="currentColor" fill="none"/>
+                                        <rect x="6" y="6" width="4" height="4" stroke="currentColor" fill="none"/>
+                                        <rect x="11" y="6" width="4" height="4" stroke="currentColor" fill="none"/>
+                                    </svg>
+                                </button>
+                                <button class="view-btn active" data-view="grid-3">
+                                    <svg width="16" height="16" viewBox="0 0 16 16">
+                                        <rect x="1" y="1" width="2" height="2" stroke="currentColor" fill="none"/>
+                                        <rect x="4" y="1" width="2" height="2" stroke="currentColor" fill="none"/>
+                                        <rect x="7" y="1" width="2" height="2" stroke="currentColor" fill="none"/>
+                                        <rect x="10" y="1" width="2" height="2" stroke="currentColor" fill="none"/>
+                                        <rect x="13" y="1" width="2" height="2" stroke="currentColor" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="sort-dropdown">
+                                <details class="sort-details">
+                                    <summary class="sort-summary">
+                                        <span>BEST SELLING</span>
+                                        <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+                                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        </svg>
+                                    </summary>
+                                    <div class="sort-content">
+                                        <button class="sort-option active" data-sort="best-selling">Best selling</button>
+                                        <button class="sort-option" data-sort="featured">Featured</button>
+                                        <button class="sort-option" data-sort="alphabetical-az">Alphabetically, A-Z</button>
+                                        <button class="sort-option" data-sort="alphabetical-za">Alphabetically, Z-A</button>
+                                        <button class="sort-option" data-sort="price-low-high">Price, low to high</button>
+                                        <button class="sort-option" data-sort="price-high-low">Price, high to low</button>
+                                        <button class="sort-option" data-sort="date-old-new">Date, old to new</button>
+                                        <button class="sort-option" data-sort="date-new-old">Date, new to old</button>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid view-grid-3" id="products-grid">
+                        <!-- Products will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <site-footer></site-footer>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="collection.js"></script>
+</body>
+</html>
+

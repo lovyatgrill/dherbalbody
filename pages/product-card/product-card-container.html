@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card Container Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        
+        <!-- Product Grid Container -->
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be rendered here -->
+        </div>
+    </div>
+
+    <script type="module">
+        import { productsData } from '../../js/data.js';
+
+        function renderProducts() {
+            const productGrid = document.getElementById('productGrid');
+            const products = Object.values(productsData).slice(0, 4); // Get first 4 products
+
+            products.forEach(product => {
+                const productCard = `
+                    <div class="product-card">
+                        <div class="image-wrapper">
+                            <img src="${product.images[0]}" alt="${product.name}">
+                            <button class="add-to-cart">Add to cart</button>
+                            ${product.isBestSeller ? '<span class="badge">Bestseller</span>' : ''}
+                            ${product.isNew ? '<span class="badge">New</span>' : ''}
+                            ${product.onSale ? '<span class="badge">Sale</span>' : ''}
+                        </div>
+                        <div class="product-info">
+                            <span class="tag">${product.category}</span>
+                            <h4 class="brand">${product.brand}</h4>
+                            <p class="title">${product.name}</p>
+                            <div class="rating">${'★'.repeat(Math.floor(product.rating))} (${product.reviewCount})</div>
+                            <p class="price">$${product.price.toFixed(2)}</p>
+                        </div>
+                    </div>
+                `;
+                productGrid.insertAdjacentHTML('beforeend', productCard);
+            });
+        }
+
+        // Render products when the page loads
+        document.addEventListener('DOMContentLoaded', renderProducts);
+    </script>
+</body>
+</html>

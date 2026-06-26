@@ -1,0 +1,19 @@
+    <picture>
+                              <source srcset="//eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=375 375w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=450 450w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=750 750w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=900 900w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=1100 1100w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/Slider1.jpg?v=1742205354&amp;width=1500 1500w" media="(max-width: 767px)" width="585" height="750">
+                              <img srcset="//eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=750 750w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=900 900w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=1100 1100w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=1500 1500w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=1780 1780w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=2000 2000w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=3000 3000w,
+                                  //eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=3840 3840w" loading="eager" fetchpriority="high" decoding="sync" sizes="100vw" src="//eurus-puff.myshopify.com/cdn/shop/files/SI-1.jpg?v=1740986115&amp;width=3840" :alt="(screen.width &lt; 768) ? '' : ''" class="object-cover h-full w-full image-template--20740642505005__4c9e1af5-c4c0-48cf-b771-49029eedd24f-slide-2" width="3840" height="1500">
+                            </picture>
+                          </parallax-movement>
+                        </parallax-image>
+                        

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="product-grid" id="productGrid">
+    <!-- Products will be rendered here -->
+  </div>
+
+  <script type="module">
+    import { productsData } from '../../js/data.js';
+    import './product-card-component.js';
+
+    function renderProducts() {
+      const productGrid = document.getElementById('productGrid');
+      const products = Object.values(productsData).slice(0, 4); // Get first 4 products
+
+      products.forEach(product => {
+        const productCard = document.createElement('product-card');
+        productCard.setAttribute('product-data', JSON.stringify(product));
+        productGrid.appendChild(productCard);
+      });
+    }
+
+    // Render products when the page loads
+    document.addEventListener('DOMContentLoaded', renderProducts);
+  </script>
+</body>
+</html>

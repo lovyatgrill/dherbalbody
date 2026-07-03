@@ -28,7 +28,7 @@ export const productsData = {
         skinType: ['fair', 'light'],
         unitCount: ['50ml'],
         features: ['Natural organic ingredients', 'Deep moisturizing formula'],
-        description: '(Mini Combo Set) This is a combination of both the "Big Butt Formula" Cream & The "Bum curve essential Oils". This combo gives you an extra edge in enhancing & beautifying those sides. All naturally hand made products. We have made Combo\'s more affordable when put together than buying separately too. It\'s a win! win!! For External Use Only. Price $95',
+        description: '(Mini Combo Set) This is a combination of both the "Big Butt Formula" Cream & The "Bum curve essential Oils". This combo gives you an extra edge in enhancing & beautifying those sides. All naturally hand made products. We have made Combo\'s more affordable when put together than buying separately too. It\'s a win! win!! For External Use Only.',
         ingredients: 'Aqua, Citrus Extract, Glycerin, Shea Butter, Vitamin E'
     },
     'weight-gain-powder': {
@@ -49,7 +49,7 @@ export const productsData = {
         skinType: ['medium', 'dark'],
         unitCount: ['30ml'],
         features: ['Flawless finish', 'Long-lasting wear'],
-        description: 'Trying to Gain some Weight is not as difficult as it seems. Our Weight Gain Powder does a wonderful job in increasing the fat levels in your estrogen making you gain a healthy weight. Comes in 1 kilo for a pack. You can mix it with your daily meals or as beverages. Super effective with early visible results. Price $50',
+        description: 'Trying to Gain some Weight is not as difficult as it seems. Our Weight Gain Powder does a wonderful job in increasing the fat levels in your estrogen making you gain a healthy weight. Comes in 1 kilo for a pack. You can mix it with your daily meals or as beverages. Super effective with early visible results.',
         ingredients: 'Aqua, Dimethicone, Titanium Dioxide, Iron Oxides, Vitamin C'
     },
     'bumcurve-essential-oil': {
@@ -70,7 +70,7 @@ export const productsData = {
         skinType: ['sensitive', 'fair'],
         unitCount: ['60ml'],
         features: ['Birch butter formula', 'Silky smooth texture'],
-        description: 'The Bumcurve Essential Oil was made to support & enhance growth of the "Buttocks" when applied. Produced with the finest natural organic oils & sourced out ingredients from all around the globe. The ingredients used initially will soak with the oils & with time it becomes more effective as you use. Visible Results within 2-3weeks✅. Price $45',
+        description: 'The Bumcurve Essential Oil was made to support & enhance growth of the "Buttocks" when applied. Produced with the finest natural organic oils & sourced out ingredients from all around the globe. The ingredients used initially will soak with the oils & with time it becomes more effective as you use. Visible Results within 2-3weeks✅.',
         ingredients: 'Aqua, Betula Alba Extract, Shea Butter, Glycerin, Allantoin'
     },
     'curves-n-butt-powder': {
@@ -112,7 +112,7 @@ export const productsData = {
         skinType: ['all'],
         unitCount: ['20ml'],
         features: ['Natural ingredients', 'Suitable for all skin types'],
-        description: 'Omega Combo Set is the combination of both external & internal products together mainly targeted on people with stubborn estrogen levels to work effectively with visible results from 14 days +. This Combo at the same time is more affordable if purchased as a whole than buying the single products itself. It\'s a strong combination. Price $99',
+        description: 'Omega Combo Set is the combination of both external & internal products together mainly targeted on people with stubborn estrogen levels to work effectively with visible results from 14 days +. This Combo at the same time is more affordable if purchased as a whole than buying the single products itself. It\'s a strong combination.',
         ingredients: 'Aqua, Aloe Vera, Jojoba Oil, Glycerin, Vitamin E'
     },
     'big-butt-formula': {
@@ -133,7 +133,7 @@ export const productsData = {
         skinType: ['all'],
         unitCount: ['50ml'],
         features: ['Handmade', 'Enhances butt & curves', 'Reduces stretch marks'],
-        description: 'The Big Butt Formula (BBF) Herbal Organic cream is a wonderful handmade mixture of different nature filled ingredients that helps in enhancing the Butt & Curves areas. Tested & trusted by many customers that have used the products in recent times even gave testimonials on how it got rid of stretch marks along the journey of its effectiveness. We started our beauty business firstly with producing this fantastic product & now it\'s a buyers choice today💯✅. Price $60',
+        description: 'The Big Butt Formula (BBF) Herbal Organic cream is a wonderful handmade mixture of different nature filled ingredients that helps in enhancing the Butt & Curves areas. Tested & trusted by many customers that have used the products in recent times even gave testimonials on how it got rid of stretch marks along the journey of its effectiveness. We started our beauty business firstly with producing this fantastic product & now it\'s a buyers choice today💯✅.',
         ingredients: 'Herbal extracts, natural oils, shea butter, essential vitamins'
     },
     'big-maxi-capsule': {
@@ -469,7 +469,7 @@ export const productsData = {
         skinType: ['all'],
         unitCount: ['3-piece combo'],
         features: ['Boobs Firming Oil (100g)', 'Capsules (60 counts)', 'Powder (300-500g)', 'Complete boost & firm system', 'Addresses internal & external enhancement'],
-        description: 'Super Boobs Combo Set: In this package we carefully have combined 3 solid natural products to help "Boost & Firm" your melons raising them to live on a 100%. We started off with the Boobs Booster essential oils which sold out in 2021 in its first 3 months with unbelievable testimonials from customers around the globe. When Dherbalbody discovered how stubborn "estrogen" levels are in some women we did our research and finally added the Capsules + the Powder mix to deal with the internal growing process. Today we are proud to sell this effective combo with pride to give you a full confidence ✅🌝. Package includes: Boobs Firming Oil (100g), Capsules (60 counts), Powder (300-500g). Price $120',
+        description: 'Super Boobs Combo Set: In this package we carefully have combined 3 solid natural products to help "Boost & Firm" your melons raising them to live on a 100%. We started off with the Boobs Booster essential oils which sold out in 2021 in its first 3 months with unbelievable testimonials from customers around the globe. When Dherbalbody discovered how stubborn "estrogen" levels are in some women we did our research and finally added the Capsules + the Powder mix to deal with the internal growing process. Today we are proud to sell this effective combo with pride to give you a full confidence ✅🌝. Package includes: Boobs Firming Oil (100g), Capsules (60 counts), Powder (300-500g).',
         ingredients: 'Boobs Booster essential oils, natural estrogen-supporting herbs, capsule blend, powder mix with organic nutrients'
     }
 };

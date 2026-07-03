@@ -473,6 +473,7 @@ function addToCart(productId) {
         
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartDisplay();
+        window.dispatchEvent(new Event('cartUpdated'));
         
         // Show success message
         showNotification(`${product.name} added to cart!`);

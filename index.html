@@ -1,8 +1,18 @@
 <html class="no-js" lang="en" style="--width-scrollbar: 5px; --height-header: 0px; --top-header: 0px;"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        body {
+            position: relative;
+        }
+    </style>
     
     
 <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin=""><title x-data="xTabAttention({
@@ -1111,7 +1121,9 @@ for (var attr in meta) {
    <script src="./components/nav-component.js"></script>
     <script src="./components/footer-component.js"></script>
 
-<script type="module" defer="" src="https://eurus-puff.myshopify.com/cdn/shopifycloud/media-analytics/v0.1/analytics.js"></script><script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/instant.page.v5.1.1.js?v=115826685041894474631740738509" defer=""></script><link rel="prefetch" href="http://localhost:5173/collections"><link rel="prefetch" href="http://localhost:5173/collections/collection.html"><script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/instant.page.v5.1.1.js?v=115826685041894474631740738509" defer=""></script><link rel="prefetch" href="http://localhost:5173/collections"><link rel="prefetch" href="http://localhost:5173/collections"><link rel="prefetch" href="http://localhost:5173/collections/collection.html"><link rel="prefetch" href="http://localhost:5173/collections/collection.html"></head>
+<script type="module" defer="" src="https://eurus-puff.myshopify.com/cdn/shopifycloud/media-analytics/v0.1/analytics.js"></script>
+<script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/instant.page.v5.1.1.js?v=115826685041894474631740738509" defer=""></script>
+</head>
 
 <body class="gradient scrollbar-body overflow-x-hidden text-[0.7875rem] md:text-[0.875rem]" x-data="{ runDispatch: true }" :class="($store.xPopup.open || $store.xPopup.openVideoShopping) &amp;&amp; 'overflow-hidden padding-scrollbar'" x-init="$store.xPopup.setWidthScrollbar();" x-on:mouseover="if (runDispatch) { $dispatch('init-run'); runDispatch = false; }" x-on:touchstart="if (runDispatch) { 
       if (event.target.parentNode.parentNode.id == 'SearchOpen' || event.target.parentNode.id == 'SearchOpen') { setTimeout(() =&gt; {  document.querySelector('#SearchOpen').click() }, 200) }
@@ -3417,7 +3429,7 @@ for (var attr in meta) {
                 
              
 
-              </main></div><div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" src="http://localhost:5173/wpm@25defc1cw623deafep7265ec1cm5d91da82/custom/web-pixel-shopify-custom-pixel@0402/sandbox/modern/index.html" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div><div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" src="http://localhost:5173/wpm@25defc1cw623deafep7265ec1cm5d91da82/custom/web-pixel-shopify-custom-pixel@0402/sandbox/modern/index.html" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div>
+              </main></div>
         
     
   
@@ -5272,11 +5284,7 @@ for (var attr in meta) {
           
           // Add item to cart with quantity 1
           cartService.addItem(productId, 1);
-          
-          // Get product name for feedback
-          const card = this.closest('.beauty-product-card');
-          const productName = card ? card.querySelector('.product-name').textContent : 'Product';
-          
+            window.dispatchEvent(new Event('cartUpdated'));
           // Show feedback
           showAddFeedback(productName);
           
@@ -5297,7 +5305,7 @@ for (var attr in meta) {
 
 </section>
 
-<div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" src="http://localhost:5173/wpm@25defc1cw623deafep7265ec1cm5d91da82/custom/web-pixel-shopify-custom-pixel@0402/sandbox/modern/index.html" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div><div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" src="http://localhost:5173/wpm@25defc1cw623deafep7265ec1cm5d91da82/custom/web-pixel-shopify-custom-pixel@0402/sandbox/modern/index.html" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-25defc1cw623deafep7265ec1cm5d91da82" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div><section id="shopify-section-template--24167821082942__product_attribute_table_W8EPQd" class="shopify-section section x-section x-section-product-attribute-table">
+<section id="shopify-section-template--24167821082942__product_attribute_table_W8EPQd" class="shopify-section section x-section x-section-product-attribute-table">
 <style data-shopify="">
   .heading-template--24167821082942__product_attribute_table_W8EPQd {
     font-size: 1.35rem; 
@@ -8896,6 +8904,21 @@ for (var attr in meta) {
 <script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/estimate-shipping-rate.js?v=175873386758004308681740738509" defer=""></script><script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/cart-countdown-timer.js?v=136257643267519206061740738509" defer=""></script><script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/theme.js?v=109703822421032683791740738685" defer=""></script>
     <script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/vendors.js?v=21726020999429958561740738509" defer=""></script>
     <script>
+      function deferScriptLoad(name, src, callback, async = false) {
+        if (window.Eurus && window.Eurus.loadedScript && window.Eurus.loadedScript.includes(name)) {
+          return;
+        }
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = async;
+        script.onload = function() {
+          if (typeof callback === 'function') callback();
+        };
+        document.head.appendChild(script);
+        if (window.Eurus && window.Eurus.loadedScript) {
+          window.Eurus.loadedScript.push(name);
+        }
+      }
       window.addEventListener("load", (event) => {
         deferScriptLoad('instant.page', '//eurus-puff.myshopify.com/cdn/shop/t/59/assets/instant.page.v5.1.1.js?v=115826685041894474631740738509', () => {}, true);
       });
@@ -8965,5 +8988,196 @@ for (var attr in meta) {
       initializeChatbot();
     }
   </script>
+
+<!-- SEARCH MODAL -->
+<div id="search-modal" class="fixed inset-0 left-0 top-0 right-0 bottom-0 bg-black bg-opacity-50 z-[100] hidden flex items-start sm:items-center justify-center p-4 sm:p-6 overflow-auto" style="display: none; position: fixed; width: 100vw; height: 100vh;">
+  <div class="bg-white rounded-lg w-full max-w-[calc(100vw-2rem)] sm:max-w-2xl max-h-[calc(100vh-3rem)] h-full sm:h-auto flex flex-col overflow-hidden mx-auto">
+    <!-- Search Header -->
+    <div class="p-4 sm:p-6 border-b border-gray-200">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold">Search Products</h2>
+        <button id="search-close-btn" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+      </div>
+      <input 
+        type="text" 
+        id="search-input" 
+        placeholder="Search by product name, category, or description..." 
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="flex-1 overflow-y-auto p-4 sm:p-6">
+      <p id="no-results" class="text-gray-500 text-center py-8">Start typing to search for products...</p>
+      <div id="results-list" class="space-y-4"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('click', function(event) {
+    const openButton = event.target.closest('[data-search-open], #SearchOpen');
+    if (!openButton) return;
+    event.preventDefault();
+
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const noResults = document.getElementById('no-results');
+    const resultsList = document.getElementById('results-list');
+
+    if (searchModal) {
+      searchModal.classList.remove('hidden');
+      searchModal.style.display = 'flex';
+    }
+    if (searchInput) {
+      searchInput.value = '';
+      setTimeout(() => searchInput.focus(), 50);
+    }
+    if (noResults) {
+      noResults.textContent = 'Start typing to search for products...';
+      noResults.style.display = 'block';
+    }
+    if (resultsList) {
+      resultsList.innerHTML = '';
+    }
+  }, true);
+</script>
+
+<script type="module">
+  import { productsData } from './js/data.js';
+
+  const searchModal = document.getElementById('search-modal');
+  const searchInput = document.getElementById('search-input');
+  const searchCloseBtn = document.getElementById('search-close-btn');
+  const resultsList = document.getElementById('results-list');
+  const noResults = document.getElementById('no-results');
+
+  function openSearch() {
+    if (!searchModal) return;
+    searchModal.classList.remove('hidden');
+    searchModal.style.display = 'flex';
+    searchInput.value = '';
+    resultsList.innerHTML = '';
+    noResults.textContent = 'Start typing to search for products...';
+    noResults.style.display = 'block';
+    setTimeout(() => searchInput.focus(), 50);
+  }
+
+  window.openSearch = openSearch;
+  window.openDherbalSearch = function(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+    openSearch();
+  };
+
+  function closeSearch() {
+    if (!searchModal) return;
+    searchModal.style.display = 'none';
+    searchModal.classList.add('hidden');
+    searchInput.value = '';
+    resultsList.innerHTML = '';
+    noResults.textContent = 'Start typing to search for products...';
+    noResults.style.display = 'block';
+  }
+
+  function renderResults(results) {
+    resultsList.innerHTML = '';
+
+    if (results.length === 0) {
+      noResults.textContent = 'No products found. Try a different search.';
+      noResults.style.display = 'block';
+      return;
+    }
+
+    noResults.style.display = 'none';
+
+    results.forEach(product => {
+      const resultItem = document.createElement('div');
+      resultItem.className = 'border border-gray-200 rounded-lg p-4 hover:shadow-lg transition';
+      resultItem.innerHTML = `
+        <a href="singleproduct/single-product.html?product=${encodeURIComponent(product.id)}" class="block text-current no-underline">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-gray-900">${product.name}</h3>
+              <p class="text-sm text-gray-500 mb-2">${product.brand} | ${product.category}</p>
+              <p class="text-gray-700 text-sm mb-3">${product.description ? product.description.substring(0, 100) : ''}...</p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-green-600">$${product.price.toFixed(2)}</span>
+                <span class="text-sm ${product.inStock ? 'text-green-600' : 'text-red-600'} font-semibold">
+                  ${product.inStock ? '✓ In Stock' : '✗ Out of Stock'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+      `;
+      resultsList.appendChild(resultItem);
+    });
+  }
+
+  function normalize(text) {
+    return String(text || '').toLowerCase();
+  }
+
+  function searchProducts(query) {
+    const normalizedQuery = normalize(query).trim();
+    if (!normalizedQuery) {
+      return [];
+    }
+
+    return Object.values(productsData).filter(product => {
+      const fields = [
+        normalize(product.name),
+        normalize(product.brand),
+        normalize(product.category),
+        normalize(product.description),
+        normalize(product.id)
+      ];
+
+      return fields.some(field => field.includes(normalizedQuery));
+    });
+  }
+
+  function updateSearchResults() {
+    const query = searchInput.value;
+    const results = searchProducts(query);
+    renderResults(results);
+  }
+
+  document.addEventListener('click', (event) => {
+    const openButton = event.target.closest('[data-search-open], #SearchOpen');
+    if (openButton) {
+      event.preventDefault();
+      openSearch();
+    }
+  }, true);
+
+  if (searchCloseBtn) {
+    searchCloseBtn.addEventListener('click', closeSearch);
+  }
+
+  if (searchModal) {
+    searchModal.addEventListener('click', (event) => {
+      if (event.target === searchModal) {
+        closeSearch();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchModal && searchModal.style.display === 'flex') {
+      closeSearch();
+    }
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', updateSearchResults);
+    searchInput.addEventListener('keyup', () => {
+      clearTimeout(window.__searchTimeout);
+      window.__searchTimeout = setTimeout(updateSearchResults, 120);
+    });
+  }
+</script>
 
 </body></html>

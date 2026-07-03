@@ -1180,24 +1180,24 @@ for (var attr in meta) {
         <div data-breakpoint="tablet" class="x-container-header-mobile-nav [grid-area:drawer] lg:hidden flex items-center w-full justify-end">
           
           
-            <div class="flex justify-end lg:order-4 [grid-area:icons] -mr-2 pb-header"><div class="flex items-center justify-center mobile-left-right" 
-                  @init-run.window="$store.xHeaderMenu.renderAjax($el, 'header-search-block', '#ajax-loading-header-search');"
+            <div class="flex justify-end lg:order-4 [grid-area:icons] -mr-2 pb-header">
+              <div class="x-header-icon-search flex items-center justify-center mobile-left-right">
+                <a
+                  id="SearchOpen"
+                  data-search-open="true"
+                  href="#"
+                  aria-label="search"
+                  class="flex items-center cursor-pointer justify-center link focus-inset opacity-70 bg-none"
+                  onclick="openDherbalSearch(event)"
                 >
-                  <a 
-                    id="SearchOpen"
-                    href="/search" 
-                    aria-label="search"
-                    class="flex items-center cursor-pointer justify-center link focus-inset opacity-70 bg-none" 
-                    @click.prevent="$store.xModal.setActiveElement('SearchOpen');">
-                    <span class="w-11 h-10 px-3 pt-2.5 pb-2"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: none;">
-        <path d="M11.4545 19.6364C15.9732 19.6364 19.6363 15.9732 19.6363 11.4545C19.6363 6.93585 15.9732 3.27273 11.4545 3.27273C6.93583 3.27273 3.27271 6.93585 3.27271 11.4545C3.27271 15.9732 6.93583 19.6364 11.4545 19.6364Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M17 18L21 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>        
-    
-</span>
-                  </a>
-                </div>
-                
+                  <span class="w-11 h-10 px-3 pt-2.5 pb-2">
+                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: none;">
+                      <path d="M11.4545 19.6364C15.9732 19.6364 19.6363 15.9732 19.6363 11.4545C19.6363 6.93585 15.9732 3.27273 11.4545 3.27273C6.93583 3.27273 3.27271 6.93585 3.27271 11.4545C3.27271 15.9732 6.93583 19.6364 11.4545 19.6364Z" stroke="currentColor" stroke-width="2"/>
+                      <path d="M17 18L21 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
                   <script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/speech-search.js?v=119739274323745654611740738509" defer></script><div class="header-icon-cart cursor-pointer relative flex items-center">
                   <a 
                     id="cart-icon"
@@ -1216,7 +1216,7 @@ for (var attr in meta) {
   </svg>
                     </span>
                     <div id="cart-icon-bubble" class="count_item absolute -top-0.5 right-0" data-value="0">
-                      <div class="bg-[rgba(var(--colors-cart))] text-[rgba(var(--colors-cart-text))] font-medium h-5 w-5 rounded-full text-[10px] hidden"><span class="h-full flex items-center justify-center mt-[1px]" aria-hidden="true">0</span></div>
+                      <div class="bg-[rgba(var(--colors-cart))] text-[rgba(var(--colors-cart-text))] font-medium h-5 w-5 rounded-full text-[10px]"><span class="h-full flex items-center justify-center mt-[1px]" aria-hidden="true">0</span></div>
                     </div>
                   </a>
                 </div><theme-mode x-data class="w-10 flex items-center lg:justify-center cursor-pointer justify-end">
@@ -1291,22 +1291,53 @@ for (var attr in meta) {
           </div><div
           class="x-container-header-icons justify-end lg:order-4 [grid-area:icons] lg:[grid-area:auto] pb-header hidden lg:flex"
         >
-          <div class="x-header-store-selector-container self-center md:block hidden"></div><div class="x-header-icon-search flex items-center justify-center mobile-left-right" @init-run.window="$store.xHeaderMenu.renderAjax($el, 'header-search-block', '#ajax-loading-header-search');">
-              <a 
-                id="SearchOpen"
-                href="/search" 
-                aria-label="search"
-                class="flex items-center cursor-pointer justify-center link focus-inset opacity-70 bg-none" 
-                @click.prevent="$store.xModal.setActiveElement('SearchOpen');">
-                <span class="w-11 h-10 px-3 pt-2.5 pb-2"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: none;">
-        <path d="M11.4545 19.6364C15.9732 19.6364 19.6363 15.9732 19.6363 11.4545C19.6363 6.93585 15.9732 3.27273 11.4545 3.27273C6.93583 3.27273 3.27271 6.93585 3.27271 11.4545C3.27271 15.9732 6.93583 19.6364 11.4545 19.6364Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M17 18L21 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>        
-    
-</span>
-              </a>
-            </div>
-            
+          <div class="x-header-store-selector-container self-center md:block hidden"></div>
+          <div class="x-header-icon-search flex items-center justify-center mobile-left-right">
+            <a
+              id="SearchOpen"
+              data-search-open="true"
+              href="#"
+              aria-label="search"
+              class="flex items-center cursor-pointer justify-center link focus-inset opacity-70 bg-none"
+              onclick="openDherbalSearch(event)"
+            >
+              <span class="w-11 h-10 px-3 pt-2.5 pb-2">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: none;">
+                  <path d="M11.4545 19.6364C15.9732 19.6364 19.6363 15.9732 19.6363 11.4545C19.6363 6.93585 15.9732 3.27273 11.4545 3.27273C6.93583 3.27273 3.27271 6.93585 3.27271 11.4545C3.27271 15.9732 6.93583 19.6364 11.4545 19.6364Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17 18L21 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+              <script>
+                function openDherbalSearch(event) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  const searchModal = document.getElementById('search-modal');
+                  const searchInput = document.getElementById('search-input');
+                  const resultsList = document.getElementById('results-list');
+                  const noResults = document.getElementById('no-results');
+
+                  if (!searchModal) return;
+
+                  searchModal.classList.remove('hidden');
+                  searchModal.style.display = 'flex';
+
+                  if (searchInput) {
+                    searchInput.value = '';
+                    setTimeout(() => searchInput.focus(), 50);
+                  }
+
+                  if (resultsList) {
+                    resultsList.innerHTML = '';
+                  }
+
+                  if (noResults) {
+                    noResults.textContent = 'Start typing to search for products...';
+                    noResults.style.display = 'block';
+                  }
+                }
+              </script>
               <script src="//eurus-puff.myshopify.com/cdn/shop/t/59/assets/speech-search.js?v=119739274323745654611740738509" defer></script><div class="header-icon-cart cursor-pointer relative flex items-center lg:mr-1 rtl:lg:ml-1 rtl:lg:mr-0">
               <a 
                 id="cart-icon"

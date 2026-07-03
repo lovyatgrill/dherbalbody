@@ -1,6 +1,6 @@
 import cartService from '../js/cart-service.js';
 
-const SHIPPING_FEE = 25.00; // Match the shipping fee from cart.js
+const SHIPPING_FEE = 35.00; // Match the shipping fee from cart.js
 let shippingCost = SHIPPING_FEE; // Default shipping cost
 
 // Format currency
@@ -35,7 +35,7 @@ function initializeDeliveryOptions() {
             // Show/hide address form based on selection
             if (this.value === 'ship') {
                 addressForm.style.display = 'block';
-                shippingCost = 25.00;
+                shippingCost = SHIPPING_FEE;
             } else {
                 addressForm.style.display = 'none';
                 shippingCost = 0;
@@ -247,10 +247,10 @@ function updateShippingInfo() {
 
 function calculateShipping(country) {
     const shippingRates = {
-        'vietnam': 25.00,
-        'usa': 25.00,
-        'uk': 25.00,
-        'default': 25.00
+        'vietnam': SHIPPING_FEE,
+        'usa': SHIPPING_FEE,
+        'uk': SHIPPING_FEE,
+        'default': SHIPPING_FEE
     };
     
     return shippingRates[country] || shippingRates.default;
@@ -315,11 +315,12 @@ function initializePayPalButton() {
         createOrder: function(data, actions) {
             const cart = cartService.loadCart();
             const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            const orderTotal = cartTotal + shippingCost;
             
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: cartTotal.toFixed(2)
+                        value: orderTotal.toFixed(2)
                     }
                 }]
             });

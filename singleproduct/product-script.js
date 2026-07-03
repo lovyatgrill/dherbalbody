@@ -396,6 +396,7 @@ function addToCart() {
     }
     
     updateCartDisplay();
+    window.dispatchEvent(new Event('cartUpdated'));
     showAddToCartFeedback();
 }
 

@@ -4,7 +4,7 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Constants
-const SHIPPING_FEE = 5.00; // Fixed shipping fee
+const SHIPPING_FEE = 35.00; // Fixed shipping fee
 
 // Grab all the UI elements
 const cartIconDesktop = document.getElementById('cart-icon-desktop');

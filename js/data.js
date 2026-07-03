@@ -136,6 +136,27 @@ export const productsData = {
         description: 'The Big Butt Formula (BBF) Herbal Organic cream is a wonderful handmade mixture of different nature filled ingredients that helps in enhancing the Butt & Curves areas. Tested & trusted by many customers that have used the products in recent times even gave testimonials on how it got rid of stretch marks along the journey of its effectiveness. We started our beauty business firstly with producing this fantastic product & now it\'s a buyers choice today💯✅. Price $60',
         ingredients: 'Herbal extracts, natural oils, shea butter, essential vitamins'
     },
+    'big-maxi-capsule': {
+        id: 'big-maxi-capsule',
+        name: 'The Big Maxi Capsule',
+        brand: 'DHERBALBODY NATURALS',
+        category: 'SUPPLEMENT',
+        price: 75.00,
+        originalPrice: null,
+        rating: 4.7,
+        reviewCount: 0,
+        images: ['../images/additional_images/Butt XL Capsule.png'],
+        inStock: true,
+        isNew: true,
+        onSale: false,
+        isBestSeller: false,
+        variants: ['#ff69b4'],
+        skinType: ['all'],
+        unitCount: ['60 capsules'],
+        features: ['100% natural organic ingredients', 'Supports hormonal balance', 'Visible results from 14 days+'],
+        description: 'This product was manufactured with the aim to help speed up the process of getting a more renounced result from your natural "Butt Enhancement" journey package. Tested & Trusted with many good positive & visible testimonials ✅💯🍑. It literally works from the inside waking up sleeping hormones that helps to enhance the Butt & Curves all together. It has been proven to help balance hormonal imbalance in women helping them with regular circles too. With a try you will tell the difference which is clear. Product is made up of 100% natural organic ingredients no additives or whatsoever. Results from 14days + .',
+        ingredients: '100% natural organic ingredients'
+    },
     'milk-lotion-triple-serum': {
         id: 'milk-lotion-triple-serum',
         name: 'Milk Lotion & Triple Action Serum',
@@ -429,6 +450,27 @@ export const productsData = {
         features: ['Endometriosis support', 'Natural herbs', 'Wellness formula'],
         description: 'Comprehensive herbal support formula for those managing endometriosis. Combines natural ingredients traditionally used to support women\'s health and wellness.',
         ingredients: 'Endometriosis-support herbs, pain-relief plant extracts'
+    },
+    'super-boobs-combo-set': {
+        id: 'super-boobs-combo-set',
+        name: 'Super Boobs Combo Set',
+        brand: 'DHERBALBODY NATURALS',
+        category: 'COMBO SET',
+        price: 120.00,
+        originalPrice: null,
+        rating: 4.9,
+        reviewCount: 0,
+        images: ['../images/additional_images/Boobs_Booster.png'],
+        inStock: true,
+        isNew: true,
+        onSale: false,
+        isBestSeller: true,
+        variants: ['#ff69b4', '#ffc0cb'],
+        skinType: ['all'],
+        unitCount: ['3-piece combo'],
+        features: ['Boobs Firming Oil (100g)', 'Capsules (60 counts)', 'Powder (300-500g)', 'Complete boost & firm system', 'Addresses internal & external enhancement'],
+        description: 'Super Boobs Combo Set: In this package we carefully have combined 3 solid natural products to help "Boost & Firm" your melons raising them to live on a 100%. We started off with the Boobs Booster essential oils which sold out in 2021 in its first 3 months with unbelievable testimonials from customers around the globe. When Dherbalbody discovered how stubborn "estrogen" levels are in some women we did our research and finally added the Capsules + the Powder mix to deal with the internal growing process. Today we are proud to sell this effective combo with pride to give you a full confidence ✅🌝. Package includes: Boobs Firming Oil (100g), Capsules (60 counts), Powder (300-500g). Price $120',
+        ingredients: 'Boobs Booster essential oils, natural estrogen-supporting herbs, capsule blend, powder mix with organic nutrients'
     }
 };
 
